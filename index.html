@@ -429,6 +429,55 @@
       flex-wrap: wrap;
     }
 
+    .contact-strip {
+  background: var(--dark-green);
+  color: white;
+  font-size: 0.92rem;
+}
+
+.contact-strip .container {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  flex-wrap: wrap;
+  padding: 8px 0;
+}
+
+.contact-strip a {
+  font-weight: 800;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.business-info {
+  margin: 18px 0 22px;
+  padding: 14px 16px;
+  border: 1px solid var(--border);
+  background: white;
+  border-radius: 18px;
+  color: var(--dark-green);
+  font-weight: 800;
+}
+
+.business-info a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.contact-card {
+  margin-top: 18px;
+  padding: 16px;
+  background: var(--light-green);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+}
+
+.contact-card strong {
+  display: block;
+  color: var(--dark-green);
+  margin-bottom: 4px;
+}
+    
     @media (max-width: 850px) {
       .nav-links {
         display: none;
@@ -460,8 +509,41 @@
       }
     }
   </style>
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Grasshopper Pressure Washing",
+    "telephone": "+15183795333",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "3505 Streams of Fields Dr",
+      "addressLocality": "Raleigh",
+      "addressRegion": "NC",
+      "postalCode": "27604",
+      "addressCountry": "US"
+    },
+    "areaServed": [
+      "Raleigh NC",
+      "Wake County NC",
+      "Cary NC",
+      "Apex NC",
+      "Wake Forest NC",
+      "Knightdale NC",
+      "Garner NC"
+    ],
+    "url": "https://grasshopperpressurewashing.com"
+  }
+  </script>
 </head>
 <body>
+    <div class="contact-strip">
+    <div class="container">
+      <span>Grasshopper Pressure Washing</span>
+      <span>3505 Streams of Fields Dr, Raleigh, NC 27604</span>
+      <span><a href="tel:+15183795333">Call or text: 518-379-5333</a></span>
+    </div>
+  </div>
   <header>
     <div class="container nav">
       <a class="brand" href="#top" aria-label="Grasshopper Pressure Washing home">
@@ -485,6 +567,10 @@
           <div class="eyebrow">Raleigh & Wake County exterior cleaning</div>
           <h1>Pressure washing that makes your place look cared for again.</h1>
           <p>Driveways, patios, walkways, siding, and gutters cleaned with clear pricing, fast scheduling, and strong before-and-after results.</p>
+                    <div class="business-info">
+            <div>Call or text: <a href="tel:+15183795333">518-379-5333</a></div>
+            <div>Address: 3505 Streams of Fields Dr, Raleigh, NC 27604</div>
+          </div>
           <div class="hero-actions">
             <a class="button" href="sms:+15183795333">Text for a Quick Quote</a>
             <a class="button secondary" href="tel:+15183795333">Call Now</a>
@@ -565,6 +651,13 @@
         <div class="quote-form" id="quote">
           <h2>Request a quick quote.</h2>
           <p>For fastest pricing, text photos of the area you want cleaned.</p>
+                    <div class="contact-card">
+            <strong>Call or text for a quick quote:</strong>
+            <a href="tel:+15183795333">518-379-5333</a>
+            <br />
+            <strong style="margin-top: 10px;">Business address:</strong>
+            3505 Streams of Fields Dr, Raleigh, NC 27604
+          </div>
           <form name="quote" method="POST" data-netlify="true">
             <input type="hidden" name="form-name" value="quote" />
             <label for="name">Name</label>
@@ -629,6 +722,10 @@
   <footer>
     <div class="container footer-row">
       <span>© <span id="year"></span> Grasshopper Pressure Washing</span>
+      <span>
+        3505 Streams of Fields Dr, Raleigh, NC 27604 • 
+        <a href="tel:+15183795333">518-379-5333</a>
+      </span>
       <span>Raleigh, NC • Driveways • Patios • House Washing • Gutters</span>
     </div>
   </footer>
